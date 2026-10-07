@@ -33,7 +33,7 @@
 - **AI 动作**：用受管 Python 列出 ZIP 全量结构（发现 `records/track_10min_16mb/` 含 30+ 真实提交），抽取 NaiveBaseline 与各 SP8192 方案的 `submission.json`、`README.md`、`train_gpt.py`、`train.log`。
 - **关键发现（真实数值）**：
   - NaiveBaseline `val_bpb = 1.2243657`，`bytes_total = 15863489`（<16MB ✓）。
-  - SP8192 栈真实演进：1.0856 (clarkkev) → 1.0828 (dexhunter) → **1.0810 (bigbag, 当前 SOTA)**。
+  - SP8192 栈真实演进：1.0856 (clarkkev) → 1.0828 (dexhunter) → **1.0810 (bigbag, 2026-04-09 时点 SOTA)**；2026-10-07 复核，官方榜首已降至 1.0565 (codemath3000, PR#2135, 2026-05-01)。
   - 各方案 `attribution` 字段给出真实 PR lineage（#1394/#549/#1204/#1331/#1217 等）。
 - **价值**：使「拿来说明」与「排行榜」可建立在**真实证据**上，而非空泛引用。
 
