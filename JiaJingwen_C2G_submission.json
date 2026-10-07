@@ -1,5 +1,5 @@
 {
-  "_note": "本文件为提交元数据【模板】。真实 val_bpb / bytes_total / seeds 需在 8×H100 上跑通后填写。字段结构对齐官方 NaiveBaseline（见 REF_baseline_submission.json）。本环境无 GPU，故以下数值为 null / 占位，未伪造任何成绩。",
+  "_note": "本文件为提交元数据【模板】。真实 val_bpb / bytes_total / seeds 需在 GPU 上跑通后回填：在跑分机器上执行 `python JiaJingwen_C2G_score_backfill.py backfill metrics.json`，必填项缺失或不合规则拒绝写入（退出码 2），绝不编造。字段结构对齐官方 NaiveBaseline（见 REF_baseline_submission.json）。本环境无 GPU（nvidia-smi / torch / 预分词数据三项实测均缺，见 score_backfill.py check 输出），故以下数值保持 null，未伪造任何成绩。",
   "author": "JiaJingwen",
   "github_id": "ZayneWenner",
   "name": "SP8192 + (planned) single-point tokenizer upgrade",
