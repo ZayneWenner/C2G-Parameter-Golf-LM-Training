@@ -1,0 +1,24 @@
+{
+  "_how_to_use": "在真实跑过训练的 GPU 机器上：把本文件另存为 metrics.json（放在交付目录根），填入真实数字，然后执行 `python JiaJingwen_C2G_score_backfill.py backfill metrics.json`。先跑 `backfill metrics.json --dry-run` 只打印不落盘，确认无误再去掉 --dry-run。",
+  "_honest_rule": "只接受真实跑分。任一项为 null / 空 / 越界，工具都会拒绝写入（退出码 2），submission.json 不被改动；不估算、不四舍五入、不补占位数字。本模板原样提交必然被拒——这是设计如此。",
+  "_source_of_truth": "每个数字都必须能在 JiaJingwen_C2G_logs/E<实验号>_seed<种子>_<配置简称>.log 里找到出处。顺序永远是：先有 log，后有 metrics.json。",
+
+  "name": "SP8192 + single-point tokenizer upgrade",
+  "protocol": "10min_16mb",
+
+  "val_bpb": null,
+  "val_bpb_std": null,
+
+  "bytes_total": null,
+  "bytes_code": null,
+
+  "seeds": [],
+  "seed_results": {},
+
+  "hardware": "",
+  "pytorch_version": "",
+  "train_seconds": null,
+  "eval_seconds": null,
+
+  "technique_summary": ""
+}
