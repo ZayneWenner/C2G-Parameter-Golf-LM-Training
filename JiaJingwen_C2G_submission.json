@@ -1,0 +1,30 @@
+{
+  "_note": "本文件为提交元数据【模板】。真实 val_bpb / bytes_total / seeds 需在 8×H100 上跑通后填写。字段结构对齐官方 NaiveBaseline（见 REF_baseline_submission.json）。本环境无 GPU，故以下数值为 null / 占位，未伪造任何成绩。",
+  "author": "JiaJingwen",
+  "github_id": "ZayneWenner",
+  "name": "SP8192 + (planned) single-point tokenizer upgrade",
+  "track": "10min_16mb",
+  "val_bpb": null,
+  "val_bpb_std": null,
+  "bytes_total": null,
+  "bytes_code": null,
+  "seeds": [],
+  "seed_results": {},
+  "hardware": "8xH100 80GB SXM (planned)",
+  "pytorch_version": "TBD",
+  "technique_summary": "Plan: BPE-1024 -> SentencePiece-8192 tokenizer upgrade (primary lever, ~-0.14 BPB per official PR#1394). See JiaJingwen_C2G_方案设计.md E003.",
+  "compliance": {
+    "train_under_600s": null,
+    "artifact_under_16mb": null,
+    "eval_under_600s": null,
+    "three_seeds": false
+  },
+  "baseline_reference": {
+    "author": "openai",
+    "name": "Naive Baseline",
+    "date": "2026-03-18T14:56:29Z",
+    "val_bpb": 1.2243657,
+    "bytes_total": 15863489,
+    "bytes_code": 47642
+  }
+}
