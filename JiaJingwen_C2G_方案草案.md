@@ -36,7 +36,7 @@
 - Kudo & Richardson (2018), *SentencePiece: A simple and language independent subword tokenizer and detokenizer for Neural Text Processing*, arXiv:1808.06209。这是 SP 的权威出处，论证了"language-independent subword 单元"在压缩率上的优势。
 
 **实战/历史提交证据（≥1 条）**：
-- **当前榜首 SP8192 + 3-Layer Recurrence ≈ 1.0810 BPB**（CHALLENGE.md 第 50–51 行）。注意：榜首方案的核心前缀就是 `SP8192`——说明 SentencePiece-8192 是 top 方案的公共基石，而非边缘技巧。
+- **2026-04-09 时点榜首 SP8192 + 3-Layer Recurrence = 1.0810 BPB**（CHALLENGE.md 第 50–51 行）。2026-10-07 复核：官方榜首已降至 **1.0565**（codemath3000, PR#2135, 2026-05-01），我的 `JiaJingwen_C2G_leaderboard.md` §1 已补入 16 条 2026-04-09 之后的记录。注意：1.08x 档榜首方案的核心前缀就是 `SP8192`——说明 SentencePiece-8192 是该档方案的公共基石，而非边缘技巧。
 - **官方 `reference_top_submissions/` 中 `sp8192_*` 占据前 5 席中的多席**（`sp8192_3layer_recurrence`、`sp8192_parallel_residual`、`sp8192_qk_gain5`、`sp8192_hessian_sdclip`、`sp8192_gptq_embedding`）——5 个里 5 个都带 SP8192，这是比任何论文都硬的"社区共识"证据。
 - **modded-nanoGPT 历史**：Keller Jordan 一脉的 speedrun 社区普遍把"替换/扩充 tokenizer"作为第一个可观测杠杆；OpenAI 官方 `train_gpt.py` 脚手架也已内置 `sp_8192.model` 作为可选 tokenizer，说明官方默认路径就包含它。
 
