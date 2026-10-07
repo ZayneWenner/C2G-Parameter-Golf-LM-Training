@@ -60,7 +60,7 @@
 | **Row-normalized Muon (MuonEq-R)** | PR #1260 @dexhunter | 1.0912+ | E005 优化器替换 |
 | **Full-Hessian GPTQ + SDClip 量化** | PR #1019 @abaybektursun；PR #1394 @clarkkev | — | artifact 压缩至 ≤16MB |
 
-> 证据出处：官方仓库 `records/track_10min_16mb/` 下各 `README.md`（NaiveBaseline、SP8192_QK5_LegalTTT、SP8192_3LayerRecur…）。当前 SOTA = **1.0810**（bigbag, 2026-04-09）。
+> 证据出处：官方仓库 `records/track_10min_16mb/` 下各 `README.md`（NaiveBaseline、SP8192_QK5_LegalTTT、SP8192_3LayerRecur…）。2026-10-07 复核：当前 SOTA = **1.0565**（codemath3000, PR#2135, 2026-05-01）；1.0810 为 2026-04-09 时点值。
 
 ---
 
@@ -95,7 +95,7 @@
 - NaiveBaseline 真实记录（val_bpb 1.2244）：`records/track_10min_16mb/2026-03-17_NaiveBaseline/`
 - SP8192 + GPTQ + 深度循环（PR #1394, clarkkev, 1.0856）
 - SP8192 + QK5 + 合法 TTT（dexhunter, 1.0828）
-- SP8192 + 3层循环 + 并行残差 + TTT（bigbag, 1.0810，当前 SOTA）
+- SP8192 + 3层循环 + 并行残差 + TTT（bigbag, 1.0810，2026-04-09 时点 SOTA；2026-10-07 复核当前榜首 1.0565）
 - Muon 优化器：Keller Jordan, `https://kellerjordan.github.io/posts/muon/`
 - SentencePiece：Kudo & Richardson (2018), arXiv:1808.06209
 - nanoGPT：Karpathy, `https://github.com/karpathy/nanoGPT`
